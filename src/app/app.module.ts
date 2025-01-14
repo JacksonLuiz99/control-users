@@ -16,7 +16,9 @@ import { MatIconModule } from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { environment } from '../environments/environment.development';
 
+import{ AngularFireModule } from'@angular/fire/compat';
 
 @NgModule({
   declarations: [
@@ -33,6 +35,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
     CommonModule,
     MatIconModule,
     MatProgressSpinnerModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [
     provideAnimationsAsync(),
