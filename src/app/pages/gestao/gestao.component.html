@@ -5,17 +5,17 @@
     <div class="row">
         <div class="col-12">
             <h1 class="titulo">Cadastro de Usuários</h1>
-            <h2 class="subtitulo">Gerencie usuários, adicionando, editando ou exclíndo</h2>
+            <h2 class="subtitulo">Gerencie usuários, adicionando, editando ou exclíndo,</h2>
         </div>
     </div>
 </div>
 
-<div class="row">
+<div class="row mt-2">
     <div class="col-12">
         <app-button class="float-end" textButton="+ Cadastrar"></app-button>
 
         <mat-form-field>
-            <mat-label>Filter</mat-label>
+            <mat-label>Busca por usuário</mat-label>
             <input matInput (keyup)="applyFilter($event)" placeholder="Faça a sua busca" #input>
           </mat-form-field>
 
