@@ -21,6 +21,9 @@ import { environment } from '../environments/environment.development';
 import{ AngularFireModule } from'@angular/fire/compat';
 import { GestaoComponent } from './pages/gestao/gestao.component';
 
+import{ MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,6 +38,8 @@ import { GestaoComponent } from './pages/gestao/gestao.component';
     AppRoutingModule,
     FormsModule,
     CommonModule,
+    MatFormFieldModule,
+    MatInputModule,
     MatIconModule,
     MatProgressSpinnerModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
