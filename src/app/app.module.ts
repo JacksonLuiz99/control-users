@@ -19,6 +19,7 @@ import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment.development';
 
 import{ AngularFireModule } from'@angular/fire/compat';
+import { GestaoComponent } from './pages/gestao/gestao.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import{ AngularFireModule } from'@angular/fire/compat';
     ButtonComponent,
     LoginComponent,
     HomeComponent,
-    MenuComponent
+    MenuComponent,
+    GestaoComponent
   ],
   imports: [
     BrowserModule,
