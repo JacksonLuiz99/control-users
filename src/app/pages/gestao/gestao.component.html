@@ -19,35 +19,35 @@
             </mat-form-field>
             
             
-            <table mat-table [dataSource]="dataSource" matSort>
+            <table class="mat-elevation-z8" mat-table [dataSource]="dataSource" matSort>
 
                 <!-- ID Column -->
                 <ng-container matColumnDef="id">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
-                  <td mat-cell *matCellDef="let user"> {{user.firebaseid}} </td>
+                  <th class="th-table" mat-header-cell *matHeaderCellDef mat-sort-header> Id </th>
+                  <td class="td-table" mat-cell *matCellDef="let user"> {{user.firebaseid}} </td>
                 </ng-container>
             
                 <!-- Progress Column -->
                 <ng-container matColumnDef="name">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
-                  <td mat-cell *matCellDef="let user"> {{user.name}}% </td>
+                  <th class="th-table" mat-header-cell *matHeaderCellDef mat-sort-header> Nome </th>
+                  <td  class="td-table" mat-cell *matCellDef="let user"> {{user.name}}% </td>
                 </ng-container>
             
                 <!-- Name Column -->
                 <ng-container matColumnDef="email">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header> E-mail </th>
-                  <td mat-cell *matCellDef="let user"> {{user.email}} </td>
+                  <th class="th-table" mat-header-cell *matHeaderCellDef mat-sort-header> E-mail </th>
+                  <td class="td-table" mat-cell *matCellDef="let user"> {{user.email}} </td>
                 </ng-container>
             
                 <!-- Fruit Column -->
                 <ng-container matColumnDef="role">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Cargo </th>
-                  <td mat-cell *matCellDef="let user"> {{user.role}} </td>
+                  <th class="th-table" mat-header-cell *matHeaderCellDef mat-sort-header> Cargo </th>
+                  <td class="td-table" mat-cell *matCellDef="let user"> {{user.role}} </td>
                 </ng-container>
             
                 <ng-container matColumnDef="benefits">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header> Benefícios </th>
-                  <td mat-cell *matCellDef="let user">
+                  <th class="th-table" mat-header-cell *matHeaderCellDef mat-sort-header> Benefícios </th>
+                  <td class="td-table" mat-cell *matCellDef="let user">
 
                     @if (user.healthPlan || user.dentalPlan) {
                         <mat-icon class="c-primary">check</mat-icon>
@@ -58,8 +58,8 @@
                 </ng-container>
             
                 <ng-container matColumnDef="action">
-                  <th mat-header-cell *matHeaderCellDef mat-sort-header> </th>
-                  <td mat-cell *matCellDef="let user"></td>
+                  <th class="th-table" mat-header-cell *matHeaderCellDef mat-sort-header> </th>
+                  <td  class="td-table" mat-cell *matCellDef="let user"></td>
                   <mat-icon class="icone-tabela">visibility</mat-icon>
                   <mat-icon class="icone-tabela">edit</mat-icon>
                   <mat-icon class="icone-tabela">delete</mat-icon>
@@ -70,7 +70,7 @@
             
                 <!-- Row shown when there is no matching data. -->
                 <tr class="mat-row" *matNoDataRow>
-                  <td class="mat-cell" colspan="4">Dados de pesquisa não encontrados: "{{input.value}}"</td>
+                  <td class="mat-cell no-data" colspan="4">Dados de pesquisa não encontrados: "{{input.value}}"</td>
                 </tr>
               </table>
             

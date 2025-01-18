@@ -24,6 +24,11 @@ import { GestaoComponent } from './pages/gestao/gestao.component';
 import{ MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,6 +47,8 @@ import { MatInputModule } from '@angular/material/input';
     MatInputModule,
     MatIconModule,
     MatProgressSpinnerModule,
+    MatTableModule,
+    MatPaginatorModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [
