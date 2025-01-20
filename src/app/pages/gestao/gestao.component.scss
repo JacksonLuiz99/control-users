@@ -32,6 +32,7 @@ tr{
     font-size: 14px;
     font-weight: 500;
     color: #5a5a5a;
+    
 }
 .td-table{
     font-size: 12px;
@@ -39,14 +40,17 @@ tr{
     color: #767676;
 }
 
-.icone-table{
+.icone-tabela {
     color: #767676;
     margin-right: 10px;
     transform: rotate(0deg);
-    transition: 0,3 linear all;
-    &:hover{
-        cursor: pointer;
-        color: var(--primary-color);
-        transform: rotate(359deg);
+    transition: 0.3s linear all;
+    &:hover {
+      cursor: pointer;
+      color: var(--primary-color);
+      transform: rotate(359deg);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);  // Sombra no hover
     }
-}
+  }
+  
+  
