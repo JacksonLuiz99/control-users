@@ -27,6 +27,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { ModalViewUserComponent } from './pages/crud/modal-view-user/modal-view-user.component';
 
 
 
@@ -37,7 +38,8 @@ import { MatSortModule } from '@angular/material/sort';
     LoginComponent,
     HomeComponent,
     MenuComponent,
-    GestaoComponent
+    GestaoComponent,
+    ModalViewUserComponent
   ],
   imports: [
     BrowserModule,
