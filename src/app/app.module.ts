@@ -27,7 +27,9 @@ import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
-import { ModalViewUserComponent } from './pages/crud/modal-view-user/modal-view-user.component';
+import { ModalViewUserComponent } from './pages/gestao/modal-view-user/modal-view-user.component';
+
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -39,7 +41,7 @@ import { ModalViewUserComponent } from './pages/crud/modal-view-user/modal-view-
     HomeComponent,
     MenuComponent,
     GestaoComponent,
-    ModalViewUserComponent
+    ModalViewUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +55,7 @@ import { ModalViewUserComponent } from './pages/crud/modal-view-user/modal-view-
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
+    MatDialogModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [

@@ -59,4 +59,9 @@ export class GestaoComponent {
     }
   }
 
+  //Logicas do modal
+  openModalViewUser(){
+
+  }
+
 }
