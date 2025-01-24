@@ -24,12 +24,12 @@
             <div class="col-6">
                 <h4 class="titulo-infomacao">Plano de saúde</h4>
                 <p class="informacao" *ngIf="userData.healthPlan">{{userData.healthPlan}}</p>
-                <p class="informacao" *ngIf="!userData.healthPlan">-</p>
+                <p class="informacao" *ngIf="!userData.healthPlan">Não possui</p>
             </div>
             <div class="col-6">
                 <h4 class="titulo-infomacao">Plano Odontológico</h4>
                 <p class="informacao" *ngIf="userData.dentalPlan">{{userData.dentalPlan}}</p>
-                <p class="informacao"*ngIf="!userData.dentalPlan">-</p>
+                <p class="informacao"*ngIf="!userData.dentalPlan">Não pssui</p>
             </div>
         </div>
 </div>
