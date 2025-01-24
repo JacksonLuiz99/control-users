@@ -6,6 +6,7 @@ import { User } from '../../interfaces/user';
 import { MatTableDataSource } from '@angular/material/table';
 import { ModalViewUserComponent } from './modal-view-user/modal-view-user.component';
 import { MatDialog } from '@angular/material/dialog';
+import { ModalFormUserComponent } from './modal-form-user/modal-form-user.component';
 
 @Component({
   selector: 'app-gestao',
@@ -71,6 +72,13 @@ export class GestaoComponent {
       height: '330px',
       data: user
     })
+
+  }
+  openModalAddUser(){
+    this.dialog.open(ModalFormUserComponent, {
+      width: '700px',
+      height: '400px',
+    }).afterClosed().subscribe(() => this.getListUsers() );
 
   }
 
