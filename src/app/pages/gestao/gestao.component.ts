@@ -4,6 +4,8 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { User } from '../../interfaces/user';
 import { MatTableDataSource } from '@angular/material/table';
+import { ModalViewUserComponent } from './modal-view-user/modal-view-user.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-gestao',
@@ -19,7 +21,10 @@ export class GestaoComponent {
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
 
-  constructor(private usersService: UsersService) {
+  constructor(
+    private usersService: UsersService,
+  public dialog: MatDialog,
+) {
     this.dataSource = new MatTableDataSource<any>(this.listusers);
   }
 
@@ -35,10 +40,10 @@ export class GestaoComponent {
   getListUsers(){
     this.usersService.getAllUsers().subscribe({
       next:(response: any) =>{
+
         this.listusers = response;
 
         console.log(this.listusers); // Adicione este log para verificar os dados
-
 
         this.dataSource = new MatTableDataSource<any>(this.listusers);
         this.dataSource.paginator = this.paginator;
@@ -60,7 +65,12 @@ export class GestaoComponent {
   }
 
   //Logicas do modal
-  openModalViewUser(){
+  openModalViewUser(user: User){
+    this.dialog.open(ModalViewUserComponent, {
+      width: '700px',
+      height: '330px',
+      data: user
+    })
 
   }
 
