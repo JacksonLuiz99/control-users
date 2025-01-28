@@ -49,6 +49,7 @@ export class GestaoComponent {
         this.dataSource = new MatTableDataSource<any>(this.listusers);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;
+        this.paginator._intl.itemsPerPageLabel="Itens por páginas";
       },
       error: (err) => {
         console.error(err);
