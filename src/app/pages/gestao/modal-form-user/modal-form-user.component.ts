@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-modal-form-user',
@@ -6,5 +8,29 @@ import { Component } from '@angular/core';
   styleUrl: './modal-form-user.component.scss'
 })
 export class ModalFormUserComponent {
+
+  formUser: FormGroup;
+
+  constructor(
+    public dialogRef: MatDialogRef<ModalFormUserComponent>,
+    private formBuilder: FormBuilder
+  ){}
+
+  ngOnInt(){
+    this.buildForm();
+
+  }
+  buildForm() {
+    this.formUser = this.formBuilder.group({
+      name: [null, [Validators.required, Validators.minLength(3)]],
+      email: [null, [Validators.required, Validators.email]],
+      sector: [null, [Validators.required, Validators.minLength(2)]],
+      role: [null, [Validators.required, Validators.minLength(5)]],
+      healthPlan: [''],
+      dentalPlan: ['']
+    });
+  }
+
+  closeModal() {this.dialogRef.close();}
 
 }
