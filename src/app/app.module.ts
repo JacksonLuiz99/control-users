@@ -32,6 +32,7 @@ import { ModalViewUserComponent } from './pages/gestao/modal-view-user/modal-vie
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModalFormUserComponent } from './pages/gestao/modal-form-user/modal-form-user.component';
 
+import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
@@ -59,6 +60,7 @@ import { ModalFormUserComponent } from './pages/gestao/modal-form-user/modal-for
     MatSortModule,
     MatPaginatorModule,
     MatDialogModule,
+    MatSelectModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
   ],
   providers: [
