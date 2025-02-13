@@ -17,7 +17,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
 import { environment } from '../environments/environment.development';
-
+import {MatSelectModule} from '@angular/material/select';
 import{ AngularFireModule } from'@angular/fire/compat';
 import { GestaoComponent } from './pages/gestao/gestao.component';
 
@@ -32,7 +32,6 @@ import { ModalViewUserComponent } from './pages/gestao/modal-view-user/modal-vie
 import { MatDialogModule } from '@angular/material/dialog';
 import { ModalFormUserComponent } from './pages/gestao/modal-form-user/modal-form-user.component';
 
-import {MatSelectModule} from '@angular/material/select';
 
 
 @NgModule({
