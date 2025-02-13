@@ -27,7 +27,7 @@ export class ModalFormUserComponent {
       sector: [null, [Validators.required, Validators.minLength(2)]],
       role: [null, [Validators.required, Validators.minLength(5)]],
       healthPlan: [''],
-      dentalPlan: ['']
+      dentalPlan: [''],
     });
   }
 

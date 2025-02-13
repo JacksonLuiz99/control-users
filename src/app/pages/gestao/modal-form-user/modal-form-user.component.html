@@ -1,1 +1,20 @@
-<p>modal-form-user works!</p>
+<div class="container-fluid p-3">  
+    <mat-icon class="float-end hover" (click)="closeModal()">close  </mat-icon>
+
+        <h1 class="tutulo">Formulário de usuário</h1>
+        <h2 class="subtitulo">Preencha o formulário para salvar o usuário</h2>
+
+        <form class="row" [formGroup]="formUser"></form>
+            <div class="col-12 col-md-6 mb-2">
+                <mat-form-field class="example-full-width">
+                    <mat-label>Nome</mat-label>
+                    <input type="text" matInput formControlname="name" placeholder="Digite o seu nome">
+                    @if (formUser.controls['name'].invalid) {
+                      <mat-error>Por favor insira um nome válido</mat-error>
+                    }
+                 
+                  </mat-form-field>
+            </div>
+
+
+</div>
