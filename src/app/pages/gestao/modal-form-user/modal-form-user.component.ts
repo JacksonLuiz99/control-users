@@ -16,7 +16,7 @@ export class ModalFormUserComponent {
     private formBuilder: FormBuilder
   ){}
 
-  ngOnInt(){
+  ngOnInit(){
     this.buildForm();
 
   }
