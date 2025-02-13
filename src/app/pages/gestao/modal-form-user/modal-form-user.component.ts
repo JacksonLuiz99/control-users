@@ -9,6 +9,37 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class ModalFormUserComponent {
 
+  planoSaude = [
+    {
+      id: 1,
+      descricao: 'Plano 300 Enfermaria'
+    },
+    {
+      id: 2,
+      descricao: 'Plano 400 Enfermaria'
+    },
+    {
+      id: 3,
+      descricao: 'Plano 500 Plus'
+    },
+  ];
+
+  planosOdonto = [
+    {
+      id: 1,
+      descricao: 'Plano Basic'
+    },
+    {
+      id: 2,
+      descricao: 'Plano Medium'
+    },
+    {
+      id: 3,
+      descricao: 'Plano Plus'
+    },
+  ];
+
+
   formUser: FormGroup;
 
   constructor(
