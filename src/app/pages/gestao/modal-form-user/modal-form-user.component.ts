@@ -49,8 +49,16 @@ export class ModalFormUserComponent {
 
   ngOnInit(){
     this.buildForm();
-
   }
+
+  //Salvar usuário
+  saveUser(){
+    const objUserForm = this.formUser.getRawValue();
+
+    console.log('Dados do formulário: ', objUserForm);
+  }
+
+
   buildForm() {
     this.formUser = this.formBuilder.group({
       name: [null, [Validators.required, Validators.minLength(3)]],
