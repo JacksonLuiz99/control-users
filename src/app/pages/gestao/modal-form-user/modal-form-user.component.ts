@@ -59,18 +59,33 @@ export class ModalFormUserComponent {
   saveUser(){
     const objUserForm: User = this.formUser.getRawValue();
 
-    this.userService.addUser(objUserForm).then(
-      (Response: any) => {
-        window.alert('Usuário salvo com sucesso');
-        this.closeModal();
-      }
-    )
-    .catch(
-      err => {
-        window.alert('Erro ao salvar o usuário')
-        console.error(err);
-      }
-    );
+    if(this.data && this.data.name) {
+      //editando o usuário
+      this.userService.update(this.data.firebaseId, objUserForm).then(
+        (Response: any) => {
+          window.alert('Usuário editado com sucesso');
+          this.closeModal();
+        })
+         .catch(
+          err => {
+            window.alert('Erro ao salvar o usuário')
+            console.error(err);
+        });
+
+    } else{
+      // Salvando usuário
+      this.userService.addUser(objUserForm).then(
+        (Response: any) => {
+          window.alert('Usuário salvo com sucesso');
+          this.closeModal();
+        })
+         .catch(
+          err => {
+            window.alert('Erro ao salvar o usuário')
+            console.error(err);
+        });
+    }
+    
   }
 
 
