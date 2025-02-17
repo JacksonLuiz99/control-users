@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Inject, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatDialogRef } from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { UsersService } from '../../../services/users.service';
 import { User } from '../../../interfaces/user';
 
@@ -47,7 +47,8 @@ export class ModalFormUserComponent {
   constructor(
     public dialogRef: MatDialogRef<ModalFormUserComponent>,
     private formBuilder: FormBuilder,
-    private userService: UsersService
+    private userService: UsersService,
+    @Inject(MAT_DIALOG_DATA) public data: any,
   ){}
 
   ngOnInit(){
@@ -82,6 +83,23 @@ export class ModalFormUserComponent {
       healthPlan: [''],
       dentalPlan: [''],
     });
+    
+    if(this.data && this.data.name) {
+      this.fillForm();
+    }
+  }
+
+  //preencher formulário para edição
+  fillForm() {
+
+    this.formUser.patchValue({
+      name: this.data.name,
+      email: this.data.email,
+      sector: this.data.sector,
+      role: this.data.role,
+      healthPlan: this.data.healthPlan,
+      dentalPlan: this.data.dentalPlan,
+    })
   }
 
   closeModal() {this.dialogRef.close();}
