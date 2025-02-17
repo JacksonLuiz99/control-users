@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { UsersService } from '../../../services/users.service';
 import { User } from '../../../interfaces/user';
+import { LoadBundleTask } from 'firebase/firestore';
 
 @Component({
   selector: 'app-modal-form-user',
@@ -43,6 +44,7 @@ export class ModalFormUserComponent {
 
 
   formUser: FormGroup;
+  editUser: boolean = false;
 
   constructor(
     public dialogRef: MatDialogRef<ModalFormUserComponent>,
@@ -53,6 +55,9 @@ export class ModalFormUserComponent {
 
   ngOnInit(){
     this.buildForm();
+    if(this.data && this.data.name) {
+      this.editUser = true;
+    }
   }
 
   //Salvar usuário
