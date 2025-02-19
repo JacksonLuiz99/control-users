@@ -86,7 +86,7 @@ export class GestaoComponent {
   openModalAddUser(){
     this.dialog.open(ModalFormUserComponent, {
       width: '700px',
-      height: '400px',
+      height: '410px',
     }).afterClosed().subscribe(() => this.getListUsers() );
 
   }
@@ -94,7 +94,7 @@ export class GestaoComponent {
   openModalEditUser(user: User){
     this.dialog.open(ModalFormUserComponent, {
       width: '700px',
-      height: '400px',
+      height: '410px',
       data: user
     }).afterClosed().subscribe(() => this.getListUsers() );
   }
