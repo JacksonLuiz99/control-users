@@ -17,7 +17,13 @@
                         <app-button textButton="Iniciar" routerLink="/gestao"></app-button>
                     </div>
                     <div class="col-12 col-md-4">
+                        @defer {
                         <img src="../../../assets/dashboard.png" width="100%">
+                        } @placeholder (minimum 500ms){
+                            Carregando imagem....
+                        } @error {
+                            Falha ao carregar imagem
+                        }
                     </div>
                 </div>
             </div>
