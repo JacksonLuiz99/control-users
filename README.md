@@ -1,27 +1,103 @@
-# CrudUsuarios
+# 📋 CrudUsuarios
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.11.
+Sistema web para **cadastro, listagem, edição e exclusão de usuários** desenvolvido com Angular 17, Angular Material e integração com Firebase. Ideal para empresas que precisam gerenciar informações de usuários de forma simples, eficiente e visualmente agradável.
 
-## Development server
+## 🚀 Tecnologias Utilizadas
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- [Angular 17](https://angular.io/)
+- [Angular Material](https://material.angular.io/)
+- [Firebase](https://firebase.google.com/)
+- [Bootstrap 5](https://getbootstrap.com/)
+- [RxJS](https://rxjs.dev/)
 
-## Code scaffolding
+## 📦 Funcionalidades
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- ✅ Cadastro de novos usuários
+- ✅ Listagem de usuários com visual moderno
+- ✅ Edição e exclusão com confirmação
+- ✅ Integração com Firebase (autenticação, banco ou hosting)
+- ✅ Componentes reutilizáveis com Angular Material
+- ✅ Design responsivo com Bootstrap
 
-## Build
+## 📁 Estrutura do Projeto
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
 
-## Running unit tests
+src/
+├── app/
+│   ├── components/
+│   │   ├── button/
+│   │   ├── menu/
+│   ├── app.module.ts
+│   ├── app-routing.module.ts
+│   └── app.component.\*
+├── assets/
+├── environments/
+└── styles.scss
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+````
 
-## Running end-to-end tests
+## 🛠️ Instalação e Execução
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. **Clone o repositório**
+   ```bash
+   git clone https://github.com/seu-usuario/crud-usuarios.git
+   cd crud-usuarios
+````
 
-## Further help
+2. **Instale as dependências**
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+   ```bash
+   npm install
+   ```
+
+3. **Configure o Firebase**
+
+   * Acesse o [Firebase Console](https://console.firebase.google.com/)
+   * Crie um novo projeto
+   * Habilite os serviços necessários (ex: Firestore, Auth)
+   * Substitua as configurações em `environment.ts`
+
+4. **Execute o servidor de desenvolvimento**
+
+   ```bash
+   ng serve
+   ```
+
+   Acesse: `http://localhost:4200`
+
+## 🧪 Testes
+
+Execute os testes unitários com:
+
+```bash
+ng test
+```
+
+## 📌 Requisitos
+
+* Node.js 18 ou superior
+* Angular CLI 17.3+
+* Firebase CLI (opcional para deploy)
+
+## 🌐 Deploy (Firebase Hosting)
+
+```bash
+firebase login
+firebase init
+firebase deploy
+```
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
+## 🙋‍♂️ Autor
+
+Desenvolvido por **Jackson Luiz Domingos Silva**.
+Contato: \[[jacksoncuiaba99@gmail.com](mailto:jacksoncuiaba99@gmail.com)]
+GitHub: [@JacksonLuiz99](https://github.com/JacksonLuiz99)
