@@ -1,4 +1,4 @@
-# 📋 CrudUsuarios
+# 📋 Control Users
 
 Sistema web para **cadastro, listagem, edição e exclusão de usuários** desenvolvido com Angular 17, Angular Material e integração com Firebase. Ideal para empresas que precisam gerenciar informações de usuários de forma simples, eficiente e visualmente agradável.
 
